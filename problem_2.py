@@ -6,3 +6,22 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be
  be [2, 3, 6].'''
 
 
+'''Approach:
+List comp #I'm not strong enough in basics to do this yet, i should have 
+              it explicit 
+For loop
+1. Create empty list to store output
+2. Create temp list that excludes item
+    a. nested for loop that multiplies each element in excluded list, k
+    b. return k
+3. append k to stored output list
+4. repeat
+
+'''
+
+a = [3, 2, 1]
+
+def exclude_mult(list):
+    output = []
+
+    for i in 
