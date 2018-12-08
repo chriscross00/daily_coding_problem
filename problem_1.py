@@ -33,6 +33,22 @@ k = correspond(k, list)
 print(k)
 
 
+#geeksforgeeks implementation, how I approached it
+def pairs(value, list):
+    s = set()
+
+    for i in list:
+        j = value - i
+        if j>0 and j in s:
+            print('Pair with the sum:', k, 'are', i, 'and', j)
+        s.add(i)
+
+hi = [10, 5, 8, 2, 7, 3, 14, 17]
+
+print(pairs(k, hi))
+
+
+
 #Stack overflow implementation
 
 counter = 0
