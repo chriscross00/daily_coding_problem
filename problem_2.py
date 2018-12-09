@@ -20,7 +20,10 @@ For loop #This method doesn't work because I am removing the item I am
 4. repeat
 
 Create a copy
-1.
+1. https://stackoverflow.com/questions/10665591/how-to-remove-list-elements-in-a-for-loop-in-python
+https://stackoverflow.com/questions/1207406/how-to-remove-items-from-a-list-while-iterating/1208792
+https://www.datacamp.com/community/tutorials/18-most-common-python-list-questions-learn-python#question1
+
 '''
 
 a = [3, 2, 1]
