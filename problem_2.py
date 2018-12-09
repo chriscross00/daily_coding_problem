@@ -9,7 +9,9 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be
 '''Approach:
 List comp #I'm not strong enough in basics to do this yet, i should have 
               it explicit 
-For loop
+For loop #This method doesn't work because I am removing the item I am 
+          trying to iterate over. This throws back the error 'for j in temp'
+          that says it's not iterable.
 1. Create empty list to store output
 2. Create temp list that excludes item
     a. nested for loop that multiplies each element in excluded list, k
@@ -17,11 +19,22 @@ For loop
 3. append k to stored output list
 4. repeat
 
+Create a copy
+1.
 '''
 
 a = [3, 2, 1]
 
-def exclude_mult(list):
+def exclude_multi(list):
     output = []
 
-    for i in 
+    for i in list:
+        temp = list.remove(i)
+        for j in temp:
+            multiply = 1
+            multiply *= j
+            output.append(multiply)
+    return output
+
+exclude_multi(a)
+
