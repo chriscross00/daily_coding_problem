@@ -29,12 +29,20 @@ Division #Wow, I didn't read the part about division, so now I know 1 way to sol
     b. Initialize k = 1
 3. For loop that divides k by each element in list
     a. return k
+    
+Without division
+1. Create empty list to store results
+2. Left for loop
+    a.  i and i-1
+    *Note need to set left[-1] = 1 otherwise we get 0
+3. Right for loop
+4. Return result
 '''
-
+'''
 a = [3, 2, 1]
 
 def list_mul(list):
-    result = []
+    result = [None]
     k = 1
 
     for i in list:
@@ -45,4 +53,30 @@ def list_mul(list):
     return k, result
 
 print(list_mul(a))
+'''
+a = [1, 2, 3, 4 ,5]
+def no_div(list):
+    result = [None] * len(list)
+    left = {}
+    right = {}
+
+    left[-1] = 1
+    for i in range(len(list)-1):
+        left[i] = list[i] * left[i-1]
+
+    right[len(list)] = 1
+    for j in reversed(range(len(list))[1:]):
+        right[j] = list[j] * right[j+1]
+
+    for i in range(len(list)):
+        result[i] = left[i-1] * right[i+1]
+
+    return result
+
+print(no_div(a))
+
+
+
+
+
 
