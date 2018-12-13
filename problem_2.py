@@ -3,7 +3,10 @@ index i of the new array is the product of all the numbers in the original
 array except the one at i.
 For example, if our input was [1, 2, 3, 4, 5], the expected output would be
  [120, 60, 40, 30, 24]. If our input was [3, 2, 1], the expected output would
- be [2, 3, 6].'''
+ be [2, 3, 6].
+
+ Follow-up: what if you can't use division?
+ '''
 
 
 '''Approach:
@@ -19,25 +22,27 @@ For loop #This method doesn't work because I am removing the item I am
 3. append k to stored output list
 4. repeat
 
-Create a copy
-1. https://stackoverflow.com/questions/10665591/how-to-remove-list-elements-in-a-for-loop-in-python
-https://stackoverflow.com/questions/1207406/how-to-remove-items-from-a-list-while-iterating/1208792
-https://www.datacamp.com/community/tutorials/18-most-common-python-list-questions-learn-python#question1
-
+Division #Wow, I didn't read the part about division, so now I know 1 way to solve this.
+1. Create empty list to store output
+2. Create k = p[0] * p[1]... p[n]
+    a. This is a for loop or I can use np.prod
+    b. Initialize k = 1
+3. For loop that divides k by each element in list
+    a. return k
 '''
 
 a = [3, 2, 1]
 
-def exclude_multi(list):
-    output = []
+def list_mul(list):
+    result = []
+    k = 1
 
     for i in list:
-        temp = list.remove(i)
-        for j in temp:
-            multiply = 1
-            multiply *= j
-            output.append(multiply)
-    return output
+        k *= i
+    for i in list:
+        result.append(k/i)
 
-exclude_multi(a)
+    return k, result
+
+print(list_mul(a))
 
