@@ -38,7 +38,6 @@ Without division
 3. Right for loop
 4. Return result
 '''
-'''
 a = [3, 2, 1]
 
 def list_mul(list):
@@ -53,8 +52,8 @@ def list_mul(list):
     return k, result
 
 print(list_mul(a))
-'''
-a = [1, 2, 3, 4 ,5]
+
+b = [1, 2, 3, 4 ,5]
 def no_div(list):
     result = [None] * len(list)
     left = {}
@@ -73,10 +72,4 @@ def no_div(list):
 
     return result
 
-print(no_div(a))
-
-
-
-
-
-
+print(no_div(b))
