@@ -16,11 +16,17 @@ Data structure: Hash table
 '''
 
 def low(list):
-    dict = {} * len(list)
+    dict = {}
 
     for pos, value in enumerate(list):
         dict[pos] = value
-    return dict
+
+    result = 1
+
+    for key in dict:
+        temp = dict[key]
+        if temp
+    return dict, result
 
 test = [1, 2, 0]
 print(low(test))
