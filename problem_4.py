@@ -8,5 +8,23 @@ You can modify the input array in-place.
 '''
 
 '''Approach:
-hmmm
+1. Have a data structure that stores i in input
+2. Look for all positive integers, starting at 1
+3. If we find a number that is not in the hash table we return it as answer
+
+Data structure: Hash table
 '''
+
+def low(list):
+    dict = {} * len(list)
+
+    for pos, value in enumerate(list):
+        dict[pos] = value
+    return dict
+
+test = [1, 2, 0]
+print(low(test))
+
+
+
+
